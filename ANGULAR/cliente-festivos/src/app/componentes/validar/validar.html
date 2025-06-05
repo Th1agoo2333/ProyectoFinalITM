@@ -1,0 +1,9 @@
+
+<div class="container">
+  <mat-form-field appearance="fill">
+    <mat-label>Fecha</mat-label>
+    <input matInput [(ngModel)]="fecha" type="date">
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="verificar()">Verificar</button>
+  <p *ngIf="resultado">{{ resultado }}</p>
+</div>

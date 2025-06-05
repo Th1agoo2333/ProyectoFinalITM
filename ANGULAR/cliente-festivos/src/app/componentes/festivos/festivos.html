@@ -1,0 +1,18 @@
+
+<div class="container">
+  <mat-form-field appearance="fill">
+    <mat-label>Año</mat-label>
+    <input matInput type="number" [(ngModel)]="anio">
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="buscarFestivos()">Consultar</button>
+
+  <ngx-datatable
+    class="material striped"
+    [rows]="festivos"
+    [columns]="[{ name: 'Fecha', prop: 'fecha' }, { name: 'Nombre', prop: 'nombre' }]"
+    [columnMode]="'force'"
+    [headerHeight]="50"
+    [footerHeight]="50"
+    [rowHeight]="'auto'">
+  </ngx-datatable>
+</div>
